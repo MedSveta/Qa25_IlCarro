@@ -23,5 +23,14 @@ public class LoginTests extends TestBase {
 
         Assert.assertTrue(app.getHelperUser().isLogged());
     }
+    @Test
+    public void LoginSuccessModel() {
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("sveta12345@gmail.com", "1234567$Ru");
+        app.getHelperUser().submitLogin();
 
+        Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
+        app.getHelperUser().closeWindowLoggedIn();
+        Assert.assertTrue(app.getHelperUser().isLogged());
+}
 }
