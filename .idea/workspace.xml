@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc03130d-1ea5-4e20-a88a-9eb1d8fd259d" name="Changes" comment="added loginPositiveTest+" />
+    <list default="true" id="bc03130d-1ea5-4e20-a88a-9eb1d8fd259d" name="Changes" comment="added loginPositiveTest+2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715012491822</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added loginPositiveTest+2">
+      <created>1715012631584</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715012631584</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,6 +192,7 @@
     <MESSAGE value="added new project" />
     <MESSAGE value="added loginPositiveTest" />
     <MESSAGE value="added loginPositiveTest+" />
-    <option name="LAST_COMMIT_MESSAGE" value="added loginPositiveTest+" />
+    <MESSAGE value="added loginPositiveTest+2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added loginPositiveTest+2" />
   </component>
 </project>

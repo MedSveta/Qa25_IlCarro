@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -12,6 +13,7 @@ public class LoginTests extends TestBase {
             app.getHelperUser().logout();
         }
     }
+
     @Test
     public void LoginSuccess() {
         app.getHelperUser().openLoginForm();
@@ -19,10 +21,9 @@ public class LoginTests extends TestBase {
         app.getHelperUser().submitLogin();
 
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
-        app.getHelperUser().closeWindowLoggedIn();
-
         Assert.assertTrue(app.getHelperUser().isLogged());
     }
+
     @Test
     public void LoginSuccessModel() {
         app.getHelperUser().openLoginForm();
@@ -30,7 +31,11 @@ public class LoginTests extends TestBase {
         app.getHelperUser().submitLogin();
 
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
-        app.getHelperUser().closeWindowLoggedIn();
         Assert.assertTrue(app.getHelperUser().isLogged());
-}
+    }
+
+    @AfterMethod
+    public void postCondition() {
+        app.getHelperUser().closeWindowLoggedIn();
+    }
 }
