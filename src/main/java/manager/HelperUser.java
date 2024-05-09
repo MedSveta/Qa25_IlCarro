@@ -1,6 +1,7 @@
 package manager;
 
 import manager.HelperBase;
+import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -16,6 +17,10 @@ public class HelperUser extends HelperBase {
     public void fillLoginForm(String email, String password){
         type(By.xpath("//*[@id='email']"), email);
         type(By.xpath("//*[@id='password']"), password);
+    }
+    public void fillLoginForm(User user){
+        type(By.xpath("//*[@id='email']"), user.getEmail());
+        type(By.xpath("//*[@id='password']"), user.getPassword());
     }
     public  void submitLogin(){
         click(By.xpath("//button[@type='submit']"));

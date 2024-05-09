@@ -30,7 +30,7 @@ public class HelperBase {
         return list.size()>0;
     }
      public String getMessage(){
-        pause(2000);
+        pause(5000);
         return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
      }
 
