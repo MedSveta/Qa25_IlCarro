@@ -1,6 +1,7 @@
 package manager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -40,8 +41,14 @@ public class HelperBase {
     }
 
     public boolean isTextInElementPresent(By locator, String text, int time) {
-        return new WebDriverWait(wd, 5)
-                .until(ExpectedConditions.textToBePresentInElement(wd.findElement(locator), text));
+        try{
+            return new WebDriverWait(wd, 5)
+                    .until(ExpectedConditions.textToBePresentInElement(wd.findElement(locator), text));
+        } catch (TimeoutException exception){
+            exception.printStackTrace();
+            System.out.println("Create exception");
+            return  false;
+        }
     }
 
     public void pause(int time) {

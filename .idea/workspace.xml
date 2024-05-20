@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc03130d-1ea5-4e20-a88a-9eb1d8fd259d" name="Changes" comment="added Registration">
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/HelperCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AddNewCarTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
+    <list default="true" id="bc03130d-1ea5-4e20-a88a-9eb1d8fd259d" name="Changes" comment="added Registration Negative Tests">
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +68,7 @@
       <recent name="manager" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationTests.registrationWrongEmail (1)">
+  <component name="RunManager" selected="Gradle.RegistrationTests.registrationEmailEmpty">
     <configuration name="RegistrationTests.registrationEmailEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -192,9 +186,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RegistrationTests.registrationEmailEmpty" />
         <item itemvalue="Gradle.RegistrationTests.registrationWrongEmail (1)" />
         <item itemvalue="Gradle.RegistrationTests.registrationPasswordEmpty" />
-        <item itemvalue="Gradle.RegistrationTests.registrationEmailEmpty" />
         <item itemvalue="Gradle.RegistrationTests.registrationLastNameEmpty" />
         <item itemvalue="Gradle.RegistrationTests.registrationWrongName" />
       </list>
@@ -265,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715871705120</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added Registration Negative Tests">
+      <created>1716212022144</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716212022144</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,6 +288,7 @@
     <MESSAGE value="added loginNegativeTests" />
     <MESSAGE value="added RegistrationTestsTests" />
     <MESSAGE value="added Registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Registration" />
+    <MESSAGE value="added Registration Negative Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Registration Negative Tests" />
   </component>
 </project>
