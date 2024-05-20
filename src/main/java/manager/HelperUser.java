@@ -22,9 +22,7 @@ public class HelperUser extends HelperBase {
         type(By.xpath("//*[@id='email']"), user.getEmail());
         type(By.xpath("//*[@id='password']"), user.getPassword());
     }
-    public  void submit(){
-        click(By.xpath("//button[@type='submit']"));
-    }
+
     public  void closeWindowLoggedIn(){
 
         if(isElementPresent(By.xpath("//button[text()='Ok']"))) {
@@ -70,6 +68,7 @@ public class HelperUser extends HelperBase {
 
     }
     public void checkPolicyXY(){
+        if (!wd.findElement(By.id("terms-of-use")).isSelected()){
         WebElement label = wd.findElement(By.cssSelector("label[for='terms-of-use']"));
         Rectangle rectangle = label.getRect();
         int w = rectangle.getWidth();
@@ -77,6 +76,7 @@ public class HelperUser extends HelperBase {
 
         Actions actions = new Actions(wd);
         actions.moveToElement(label, xOffSet, 0).click().release().perform();
+    }
     }
     public void login(User user) {
         openLoginForm();

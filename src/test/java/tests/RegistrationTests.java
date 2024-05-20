@@ -31,7 +31,7 @@ public class RegistrationTests extends TestBase{
         User user = new User()
                 .setFirstName("Ira")
                 .setLastName("Straf")
-                .setEmail("Straf"+z+"@gmail.com")
+                .setEmail("str"+z+"@gmail.com")
                 .setPassword("Sstraf123456$");
 
         app.getHelperUser().openRegistrationForm();
@@ -45,7 +45,6 @@ public class RegistrationTests extends TestBase{
     }
     @Test
     public void registrationNameEmpty(){
-        int z = (int) (System.currentTimeMillis()/1000)%3600;
 
         User user = new User()
                 .setFirstName("")
@@ -57,11 +56,12 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().fillRegistrationForm(user);
         app.getHelperUser().checkPolicy();
         app.getHelperUser().submit();
-        Assert.assertTrue(app.getHelperUser().isTextInElementPresent(By.xpath("//div[@class='error']"), "Name is required", 5));
+        Assert.assertTrue(app.getHelperUser().isTextInElementPresent
+                (By.xpath("//div[@class='error']"), "Name is required", 5));
+        Assert.assertTrue(app.getHelperUser().isYallaButtunNotActive());
     }
     @Test
     public void registrationLastNameEmpty() {
-        int z = (int) (System.currentTimeMillis() / 1000) % 3600;
 
         User user = new User()
                 .setFirstName("Anna")
@@ -74,10 +74,10 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().checkPolicy();
         app.getHelperUser().submit();
         Assert.assertTrue(app.getHelperUser().isTextInElementPresent(By.xpath("//div[@class='error']"), "Last name is required", 5));
+        Assert.assertTrue(app.getHelperUser().isYallaButtunNotActive());
     }
         @Test
     public void registrationEmailEmpty(){
-        int z = (int) (System.currentTimeMillis()/1000)%3600;
 
         User user = new User()
                 .setFirstName("Anna")
@@ -90,10 +90,10 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().checkPolicy();
         app.getHelperUser().submit();
         Assert.assertTrue(app.getHelperUser().isTextInElementPresent(By.xpath("//div[@class='error']"), "Email is required", 5));
+            Assert.assertTrue(app.getHelperUser().isYallaButtunNotActive());
     }
     @Test
     public void registrationWrongEmail(){
-        int z = (int) (System.currentTimeMillis()/1000)%3600;
 
         User user = new User()
                 .setFirstName("Anna")
@@ -106,10 +106,10 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().checkPolicy();
         app.getHelperUser().submit();
         Assert.assertTrue(app.getHelperUser().isTextInElementPresent(By.xpath("//div[@class='error']/div"), "Wrong email format", 5));
+        Assert.assertTrue(app.getHelperUser().isYallaButtunNotActive());
     }
     @Test
     public void registrationPasswordEmpty(){
-        int z = (int) (System.currentTimeMillis()/1000)%3600;
 
         User user = new User()
                 .setFirstName("Anna")
@@ -122,6 +122,24 @@ public class RegistrationTests extends TestBase{
         app.getHelperUser().checkPolicy();
         app.getHelperUser().submit();
         Assert.assertTrue(app.getHelperUser().isTextInElementPresent(By.xpath("//div[@class='error']"), "Password is required", 5));
+        Assert.assertTrue(app.getHelperUser().isYallaButtunNotActive());
+    }
+    @Test
+    public void registrationWrongPassword(){
+
+        User user = new User()
+                .setFirstName("Anna")
+                .setLastName("Straf")
+                .setEmail("straf@gmail.com")
+                .setPassword("ssssss");
+
+        app.getHelperUser().openRegistrationForm();
+        app.getHelperUser().fillRegistrationForm(user);
+        app.getHelperUser().checkPolicy();
+        app.getHelperUser().submit();
+        Assert.assertEquals(app.getHelperUser().getErrorText(),
+                "Password must contain 1 uppercase letter, 1 lowercase letter, 1 number and one special symbol of [@$#^&*!]");
+        Assert.assertTrue(app.getHelperUser().isYallaButtunNotActive());
     }
     @AfterMethod
     public void postCondition() {
