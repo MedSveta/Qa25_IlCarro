@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc03130d-1ea5-4e20-a88a-9eb1d8fd259d" name="Changes" comment="added RegistrationTestsTests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Car.java" afterDir="false" />
+    <list default="true" id="bc03130d-1ea5-4e20-a88a-9eb1d8fd259d" name="Changes" comment="added Registration">
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/HelperCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AddNewCarTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" afterDir="false" />
     </list>
@@ -27,7 +29,17 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Qa25_IlCarro" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -62,8 +74,8 @@
       <recent name="manager" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RegistrationTests.registrationSuccess">
-    <configuration name="LoginTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.RegistrationTests.registrationWrongEmail (1)">
+    <configuration name="RegistrationTests.registrationEmailEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -76,7 +88,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.LoginTests&quot;" />
+            <option value="&quot;tests.RegistrationTests.registrationEmailEmpty&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -86,7 +98,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.LoginNegativeUnregisteredUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RegistrationTests.registrationLastNameEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -99,7 +111,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.LoginTests.LoginNegativeUnregisteredUser&quot;" />
+            <option value="&quot;tests.RegistrationTests.registrationLastNameEmpty&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -109,7 +121,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.LoginNegativeWrongEmail (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RegistrationTests.registrationPasswordEmpty" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -122,7 +134,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.LoginTests.LoginNegativeWrongEmail&quot;" />
+            <option value="&quot;tests.RegistrationTests.registrationPasswordEmpty&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -132,7 +144,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.LoginNegativeWrongPassword" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RegistrationTests.registrationWrongEmail (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -145,7 +157,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.LoginTests.LoginNegativeWrongPassword&quot;" />
+            <option value="&quot;tests.RegistrationTests.registrationWrongEmail&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -155,7 +167,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RegistrationTests.registrationSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RegistrationTests.registrationWrongName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -168,7 +180,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.RegistrationTests.registrationSuccess&quot;" />
+            <option value="&quot;tests.RegistrationTests.registrationWrongName&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RegistrationTests.registrationSuccess" />
-        <item itemvalue="Gradle.LoginTests" />
-        <item itemvalue="Gradle.LoginTests.LoginNegativeWrongPassword" />
-        <item itemvalue="Gradle.LoginTests.LoginNegativeWrongEmail (1)" />
-        <item itemvalue="Gradle.LoginTests.LoginNegativeUnregisteredUser" />
+        <item itemvalue="Gradle.RegistrationTests.registrationWrongEmail (1)" />
+        <item itemvalue="Gradle.RegistrationTests.registrationPasswordEmpty" />
+        <item itemvalue="Gradle.RegistrationTests.registrationEmailEmpty" />
+        <item itemvalue="Gradle.RegistrationTests.registrationLastNameEmpty" />
+        <item itemvalue="Gradle.RegistrationTests.registrationWrongName" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715272725961</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added Registration">
+      <created>1715871705120</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715871705120</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,6 +286,7 @@
     <MESSAGE value="added loginPositiveTest+2" />
     <MESSAGE value="added loginNegativeTests" />
     <MESSAGE value="added RegistrationTestsTests" />
-    <option name="LAST_COMMIT_MESSAGE" value="added RegistrationTestsTests" />
+    <MESSAGE value="added Registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Registration" />
   </component>
 </project>
