@@ -16,6 +16,7 @@ public class AddNewCarTests extends TestBase{
         if (!app.getHelperUser().isLogged()){
             app.getHelperUser().login(new User()
                     .setEmail("sveta12345@gmail.com").setPassword("1234567$Ru"));
+            logger.info("Logout complete");
         }
 
     }
@@ -34,6 +35,7 @@ public class AddNewCarTests extends TestBase{
                 .price(50)
                 .about("Very nice car")
                 .build();
+        logger.info("Test start with test data --->" + car.toString());
         app.getHelperCar().openCarForm();
         app.getHelperCar().fillCarForm(car);
         app.getHelperCar().submit();
@@ -57,6 +59,7 @@ public class AddNewCarTests extends TestBase{
                 .price(50)
                 .about("Very nice car")
                 .build();
+        logger.info("Test start with test data --->" + car.toString());
         app.getHelperCar().openCarForm();
         app.getHelperCar().fillCarForm(car);
         app.getHelperCar().submit();
