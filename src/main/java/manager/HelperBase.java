@@ -25,11 +25,13 @@ public class HelperBase {
             element.sendKeys(text);
         }
     }
-    public void clearNew(WebElement element){
+
+    public void clearNew(WebElement element) {
         element.sendKeys("a");
         element.sendKeys(Keys.BACK_SPACE);
     }
-    public  void submit(){
+
+    public void submit() {
         click(By.xpath("//button[@type='submit']"));
     }
 
@@ -49,13 +51,13 @@ public class HelperBase {
     }
 
     public boolean isTextInElementPresent(By locator, String text, int time) {
-        try{
+        try {
             return new WebDriverWait(wd, 5)
                     .until(ExpectedConditions.textToBePresentInElement(wd.findElement(locator), text));
-        } catch (TimeoutException exception){
+        } catch (TimeoutException exception) {
             exception.printStackTrace();
             System.out.println("Create exception");
-            return  false;
+            return false;
         }
     }
 
@@ -75,5 +77,18 @@ public class HelperBase {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void clearTextBox(By locator) {
+        WebElement element = wd.findElement(locator);
+        String os = System.getProperty("os.name");
+        if (os.startsWith("Win")) {
+            element.sendKeys(Keys.CONTROL, "a");
+
+        } else {
+
+            element.sendKeys(Keys.COMMAND, "a");
+        }
+        element.sendKeys(Keys.DELETE);
     }
 }
