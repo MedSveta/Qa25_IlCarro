@@ -73,12 +73,21 @@ public class HelperBase {
         TakesScreenshot takesScreenshot = (TakesScreenshot) wd;
         File tmp = takesScreenshot.getScreenshotAs(OutputType.FILE);
         try {
-            Files.copy(tmp, new File(link));
+            Files.copy(tmp, new File("src/test/resources/screenshots/"+link));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+    public String getErrorText() {
+        return wd.findElement(By.cssSelector("div.error")).getText();
+    }
+    public boolean isYallaButtunNotActive() {
+        boolean res = isElementPresent(By.cssSelector("button[disabled]"));
 
+        WebElement element = wd.findElement(By.cssSelector("button[type='submit']"));
+        boolean result = element.isEnabled();
+        return res && !result;
+    }
     public void clearTextBox(By locator) {
         WebElement element = wd.findElement(locator);
         String os = System.getProperty("os.name");

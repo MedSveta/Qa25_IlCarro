@@ -36,17 +36,9 @@ public class HelperUser extends HelperBase {
         click(By.cssSelector("a[href='/logout?url=%2Fsearch']"));
     }
 
-    public String getErrorText() {
-        return wd.findElement(By.cssSelector("div.error")).getText();
-    }
 
-    public boolean isYallaButtunNotActive() {
-        boolean res = isElementPresent(By.cssSelector("button[disabled]"));
 
-        WebElement element = wd.findElement(By.cssSelector("button[type='submit']"));
-        boolean result = element.isEnabled();
-        return res && !result;
-    }
+
 
     public void openRegistrationForm() {
         click(By.xpath("//a[text()=' Sign up ']"));
